@@ -1,5 +1,5 @@
 ---
-description: Commit the current GitPad work and push it to origin/main (never force)
+description: Commit the current Medcezir work and push it to origin/main (never force)
 allowed-tools: Bash
 ---
 

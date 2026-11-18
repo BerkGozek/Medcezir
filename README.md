@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="GitPad/Assets.xcassets/AppIcon.appiconset/icon-1024.png" width="128" height="128" alt="GitPad icon" />
+<img src="Medcezir/Assets.xcassets/AppIcon.appiconset/icon-1024.png" width="128" height="128" alt="Medcezir icon" />
 
-# GitPad
+# Medcezir
 
-**A native Git client for iPad.** Clone, edit, commit, push, and pull, with no Mac required.
+**A native Git client for iPad and iPhone.** Clone, edit, commit, push, and pull, with no Mac required. (Formerly GitPad.)
 
-![iPadOS 26+](https://img.shields.io/badge/iPadOS-26%2B-black?logo=apple)
+![iOS / iPadOS 26+](https://img.shields.io/badge/iOS%20%2F%20iPadOS-26%2B-black?logo=apple)
 ![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)
 ![SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0A84FF)
 ![libgit2 1.9.2](https://img.shields.io/badge/libgit2-1.9.2-6e5494)
@@ -27,14 +27,14 @@
   </tr>
 </table>
 
-## Why GitPad
+## Why Medcezir
 
 Your repositories are **real folders on your iPad**, stored where the Files app can see them.
-Open a file in any editor, save it, switch back to GitPad, and the change is waiting in
+Open a file in any editor, save it, switch back to Medcezir, and the change is waiting in
 **Changes**, ready to stage, commit, and push. Everything except fetch/pull/push works offline.
 
 ```
-Files → On My iPad → GitPad → Repositories → your-project/
+Files → On My iPad → Medcezir → Repositories → your-project/
 ```
 
 ## Features
@@ -53,7 +53,7 @@ Files → On My iPad → GitPad → Repositories → your-project/
 
 ## Built to not lose your work
 
-- **Never force-pushes.** If the remote has new commits, GitPad explains it and offers to pull first.
+- **Never force-pushes.** If the remote has new commits, Medcezir explains it and offers to pull first.
 - **Never silently overwrites.** Pulls and branch switches use a *safe* checkout: if they would
   overwrite an uncommitted change, nothing changes and you're told why.
 - **No half-finished clones.** Clones download into a hidden staging folder and appear only once
@@ -83,13 +83,13 @@ need a token: **Settings → Accounts → Add Account**.
 - Stored **only in the iPad's Keychain**, marked *this device only*, so it isn't backed up or synced
 - Sent **only** to the Git server of its own account's host (redirects to other hosts get nothing), and once to that service's API to check it when you add the account
 - **Never** written to repository settings, remote URLs, logs, or error messages
-- No analytics, no telemetry, and no GitPad server
+- No analytics, no telemetry, and no Medcezir server
 
 ## How it works
 
 ```mermaid
 flowchart LR
-    UI["SwiftUI views<br/>(GitPad app)"] --> VM["@Observable models<br/>AppModel · RepositoryModel"]
+    UI["SwiftUI views<br/>(Medcezir app)"] --> VM["@Observable models<br/>AppModel · RepositoryModel"]
     VM --> Store["RepositoryStore<br/>Documents/Repositories"]
     VM --> Accounts["AccountStore<br/>Keychain + accounts.json"]
     VM --> Git["GitRepository actor<br/>(GitKit)"]
@@ -100,9 +100,9 @@ flowchart LR
 
 | Layer | Where | What it does |
 |---|---|---|
-| **GitKit** | `Packages/GitPadKit/Sources/GitKit` | Swift wrapper over libgit2. Each repository is an `actor` on its own serial queue, because libgit2 calls block and must not tie up Swift's shared thread pool. Typed errors, redaction, cancellation, progress |
-| **GitPadCore** | `Packages/GitPadKit/Sources/GitPadCore` | Repository storage (staging → move), accounts and Keychain, token checks |
-| **App** | `GitPad/` | SwiftUI: `NavigationSplitView` sidebar, repository tabs, sheets for clone/push/settings |
+| **GitKit** | `Packages/MedcezirKit/Sources/GitKit` | Swift wrapper over libgit2. Each repository is an `actor` on its own serial queue, because libgit2 calls block and must not tie up Swift's shared thread pool. Typed errors, redaction, cancellation, progress |
+| **MedcezirCore** | `Packages/MedcezirKit/Sources/MedcezirCore` | Repository storage (staging → move), accounts and Keychain, token checks |
+| **App** | `Medcezir/` | SwiftUI: `NavigationSplitView` sidebar, repository tabs, sheets for clone/push/settings |
 
 **Why libgit2?** iPadOS has no `git` command and apps can't run other programs, so Git has to run
 inside the app. libgit2 is the mature, widely used library for exactly that. It's compiled from
@@ -118,32 +118,32 @@ complexity for no gain here.
 an iPad on iPadOS 26+ (or the simulator).
 
 ```sh
-git clone https://github.com/BerkGozek/GitPad.git
-cd GitPad
-xcodegen generate          # creates GitPad.xcodeproj from project.yml
-open GitPad.xcodeproj
+git clone https://github.com/BerkGozek/Medcezir.git
+cd Medcezir
+xcodegen generate          # creates Medcezir.xcodeproj from project.yml
+open Medcezir.xcodeproj
 ```
 
 Pick your team under **Signing & Capabilities**, select your iPad, and press **⌘R**.
 
 > [!IMPORTANT]
 > Keep the bundle ID and team the same between builds. A different one makes iPadOS install a
-> separate app, and **deleting GitPad deletes the repositories stored in it**, including anything
+> separate app, and **deleting Medcezir deletes the repositories stored in it**, including anything
 > you haven't pushed.
 
 ## Testing
 
 ```sh
 # Git engine, storage, accounts (macOS, ~1 s)
-swift test --package-path Packages/GitPadKit
+swift test --package-path Packages/MedcezirKit
 
 # UI tests on the iPad simulator
-xcodebuild -project GitPad.xcodeproj -scheme GitPad \
+xcodebuild -project Medcezir.xcodeproj -scheme Medcezir \
   -destination 'platform=iOS Simulator,name=iPad Pro 11-inch (M5)' test
 
 # Optional: real HTTPS round trip against a throwaway private GitHub repo
-GITPAD_LIVE_TESTS=1 GITPAD_TEST_REPO=https://github.com/you/sandbox.git \
-GITPAD_TEST_TOKEN=… swift test --package-path Packages/GitPadKit --filter LiveGitHubTests
+MEDCEZIR_LIVE_TESTS=1 MEDCEZIR_TEST_REPO=https://github.com/you/sandbox.git \
+MEDCEZIR_TEST_TOKEN=… swift test --package-path Packages/MedcezirKit --filter LiveGitHubTests
 ```
 
 The package tests build temporary local repositories (a bare "remote" plus clones) and cover clone,
@@ -153,9 +153,9 @@ persistence, and token handling. Results are tracked in [`PROGRESS.md`](PROGRESS
 ## Current limitations
 
 - **HTTPS only.** SSH remotes aren't supported yet.
-- **No built-in editor.** Edit files with any app through Files; GitPad picks up the changes when you return.
+- **No built-in editor.** Edit files with any app through Files; Medcezir picks up the changes when you return.
 - **Conflicts are resolved by hand.** Edit the conflict markers in an editor, then mark the file resolved. There's no visual merge tool yet.
-- **Sync runs while GitPad is open.** iPadOS may pause a clone or push if you leave the app.
+- **Sync runs while Medcezir is open.** iPadOS may pause a clone or push if you leave the app.
 - **No sign-in with GitHub yet.** Use a token (see above).
 - **Not yet supported:** stash, rebase, tags, submodules, Git LFS.
 - **Opening a whole repository folder in other apps** depends on the app supporting folders from Files; individual files always work.
@@ -173,7 +173,7 @@ persistence, and token handling. Results are tracked in [`PROGRESS.md`](PROGRESS
 
 ## License
 
-GitPad is released under the [MIT License](LICENSE).
+Medcezir is released under the [MIT License](LICENSE).
 It includes [libgit2](https://github.com/libgit2/libgit2) (GPL v2 with linking exception) and the
 libraries bundled with it. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), or
 **Settings → Acknowledgements** in the app.

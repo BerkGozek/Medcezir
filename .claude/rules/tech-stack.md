@@ -1,10 +1,10 @@
 # Tech stack and commands
 
 ## Layout
-- `Packages/GitPadKit/`: local Swift package. All logic that can be tested on macOS lives here.
+- `Packages/MedcezirKit/`: local Swift package. All logic that can be tested on macOS lives here.
   - `GitKit`: thin Swift wrapper over libgit2. It is the only target that does `import libgit2`.
-  - `GitPadCore`: repository storage, auth/account service, view models' domain logic. Depends on GitKit, never on SwiftUI.
-- `GitPad/` (app target, created from `project.yml`): SwiftUI views and the app entry point only.
+  - `MedcezirCore`: repository storage, auth/account service, view models' domain logic. Depends on GitKit, never on SwiftUI.
+- `Medcezir/` (app target, created from `project.yml`): SwiftUI views and the app entry point only.
 - `project.yml`: XcodeGen spec. **The `.xcodeproj` is generated, so never hand-edit it.** Change `project.yml`, then run `xcodegen generate`.
 - `PROGRESS.md`, `README.md`: deliverables (see `verification.md`).
 
@@ -12,22 +12,22 @@ The `.build/` folder is SwiftPM's cache (gitignored). Never read or grep inside 
 
 ## Toolchain (checked 2026-11-11)
 - Xcode 26.6, Swift 6 language mode, XcodeGen and `gh` from Homebrew.
-- Simulators: `iPad Pro 11-inch (M5)` is the default test destination. Run `xcrun simctl list devices available | grep iPad` if it is missing.
+- Simulators: `iPad Pro 11-inch (M5)` is the default test destination; also run UI tests on `iPhone 17 Pro` (compact width) since 2026-11-18. Run `xcrun simctl list devices available | grep iPad` if it is missing.
 
 ## Commands
 ```sh
-# Fast loop (macOS, seconds): run after every change to GitPadKit
-cd Packages/GitPadKit && swift build && swift test
+# Fast loop (macOS, seconds): run after every change to MedcezirKit
+cd Packages/MedcezirKit && swift build && swift test
 
 # Regenerate the Xcode project after editing project.yml or adding/removing app files
 xcodegen generate
 
 # App build + tests on the simulator
-xcodebuild -project GitPad.xcodeproj -scheme GitPad \
+xcodebuild -project Medcezir.xcodeproj -scheme Medcezir \
   -destination 'platform=iOS Simulator,name=iPad Pro 11-inch (M5)' test 2>&1 | tail -60
 
 # Device build (signing check, no install)
-xcodebuild -project GitPad.xcodeproj -scheme GitPad -destination 'generic/platform=iOS' build
+xcodebuild -project Medcezir.xcodeproj -scheme Medcezir -destination 'generic/platform=iOS' build
 ```
 Pipe `xcodebuild` output through `tail` or `grep -E "error:|warning:|Test Suite|passed|failed"`. The full log will eat your context. When something fails, re-run and grep around the first `error:` instead of reading the whole log.
 
@@ -41,4 +41,4 @@ Pipe `xcodebuild` output through `tail` or `grep -E "error:|warning:|Test Suite|
 - Don't write Git internals (packfiles, index format, merge) by hand. If libgit2 can't do it, say so.
 
 ## Architecture
-MVVM: SwiftUI views → `@Observable` view models (in the app or in GitPadCore) → services (`GitService`, `RepositoryStore`, `AuthService`) → GitKit. Use protocols only at service boundaries where tests need a fake; don't add a protocol in front of every type.
+MVVM: SwiftUI views → `@Observable` view models (in the app or in MedcezirCore) → services (`GitService`, `RepositoryStore`, `AuthService`) → GitKit. Use protocols only at service boundaries where tests need a fake; don't add a protocol in front of every type.

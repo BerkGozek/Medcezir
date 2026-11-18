@@ -1,5 +1,5 @@
 ---
-description: Run every GitPad build/test suite and update PROGRESS.md with the real results
+description: Run every Medcezir build/test suite and update PROGRESS.md with the real results
 allowed-tools: Bash, Read, Edit, Agent
 ---
 

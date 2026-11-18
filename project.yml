@@ -1,25 +1,25 @@
-name: GitPad
+name: Medcezir
 options:
   bundleIdPrefix: com.berkgozek
   deploymentTarget:
     iOS: "26.0"
 packages:
-  GitPadKit:
-    path: Packages/GitPadKit
+  MedcezirKit:
+    path: Packages/MedcezirKit
 settings:
   base:
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "0.1"
     CURRENT_PROJECT_VERSION: "1"
 targets:
-  GitPad:
+  Medcezir:
     type: application
     platform: iOS
-    sources: [GitPad]
+    sources: [Medcezir]
     # Real Info.plist for keys the INFOPLIST_KEY_* build settings silently drop
     # (UIFileSharingEnabled was missing from the built app). Xcode merges it with the generated keys.
     info:
-      path: GitPad/Info.plist
+      path: Medcezir/Info.plist
       properties:
         UIFileSharingEnabled: true
         LSSupportsOpeningDocumentsInPlace: true
@@ -27,8 +27,8 @@ targets:
         # doesn't ask the export-compliance question for every build.
         ITSAppUsesNonExemptEncryption: false
     dependencies:
-      - package: GitPadKit
-        product: GitPadCore
+      - package: MedcezirKit
+        product: MedcezirCore
     settings:
       base:
         # Keep these two fixed: a different team or bundle ID makes iPadOS treat it as a new app,
@@ -36,35 +36,36 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.GitPad
         DEVELOPMENT_TEAM: 7WRYR7WZJR
         CODE_SIGN_STYLE: Automatic
-        TARGETED_DEVICE_FAMILY: "2"
+        TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: GitPad
+        INFOPLIST_KEY_CFBundleDisplayName: Medcezir
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UIApplicationSupportsMultipleScenes: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
-  GitPadUITests:
+  MedcezirUITests:
     type: bundle.ui-testing
     platform: iOS
-    sources: [GitPadUITests]
+    sources: [MedcezirUITests]
     dependencies:
-      - target: GitPad
+      - target: Medcezir
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
         DEVELOPMENT_TEAM: 7WRYR7WZJR
         CODE_SIGN_STYLE: Automatic
-        TARGETED_DEVICE_FAMILY: "2"
-        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.GitPadUITests
+        TARGETED_DEVICE_FAMILY: "1,2"
+        PRODUCT_BUNDLE_IDENTIFIER: com.berkgozek.MedcezirUITests
 schemes:
-  GitPad:
+  Medcezir:
     build:
       targets:
-        GitPad: all
+        Medcezir: all
     run:
       config: Debug
     test:
       config: Debug
       targets:
-        - GitPadUITests
+        - MedcezirUITests

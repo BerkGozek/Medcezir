@@ -1,6 +1,6 @@
 # Third-party notices
 
-GitPad's own code is under the [MIT License](LICENSE). The app also includes the following
+Medcezir's own code is under the [MIT License](LICENSE). The app also includes the following
 third-party software. Their notices ship inside the app too (Settings → Acknowledgements).
 
 ## libgit2 1.9.2
@@ -10,10 +10,10 @@ third-party software. Their notices ship inside the app too (Settings → Acknow
 - License: **GNU GPL v2 with a linking exception**. The exception allows linking the unmodified
   library into any program, including one under a different license, and distributing that
   program; the GPL still applies to libgit2 itself (e.g. if you modify and redistribute it).
-- Full text: [`GitPad/Resources/libgit2-COPYING.txt`](GitPad/Resources/libgit2-COPYING.txt)
+- Full text: [`Medcezir/Resources/libgit2-COPYING.txt`](Medcezir/Resources/libgit2-COPYING.txt)
 
 libgit2 bundles code under its own licenses. The full notices are in the file above. The parts
-compiled into GitPad (iOS build) are:
+compiled into Medcezir (iOS build) are:
 
 | Component | License |
 |---|---|
@@ -31,6 +31,6 @@ compiled into the iOS app.
 ### LGPL (xdiff)
 
 On iOS, xdiff is linked statically into the app. The LGPL requires that users can rebuild the
-app with a modified version of the library. GitPad meets this by publishing its complete source
-code, including the build setup (`project.yml`, `Packages/GitPadKit/Package.swift`), at
-<https://github.com/BerkGozek/GitPad>: swap in a modified libgit2/xdiff and rebuild.
+app with a modified version of the library. Medcezir meets this by publishing its complete source
+code, including the build setup (`project.yml`, `Packages/MedcezirKit/Package.swift`), at
+<https://github.com/BerkGozek/Medcezir>: swap in a modified libgit2/xdiff and rebuild.

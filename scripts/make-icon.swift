@@ -1,4 +1,4 @@
-// Renders GitPad's app icon: SF Symbol "arrow.triangle.branch" on an orange gradient.
+// Renders Medcezir's app icon: SF Symbol "arrow.triangle.branch" on an orange gradient.
 // Output is exactly 1024×1024 with no alpha channel (App Store Connect rejects transparency).
 // Drawing uses a 32-bit context whose 4th byte is ignored (`noneSkipLast`): CoreGraphics can't
 // draw into 24-bit RGB, and drawing into an RGBA bitmap would keep an alpha channel.

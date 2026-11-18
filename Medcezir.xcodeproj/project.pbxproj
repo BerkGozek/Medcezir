@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		004DEDD253276C63EACCA693 /* libgit2-COPYING.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD29DF596D7DCF61B6067085 /* libgit2-COPYING.txt */; };
+		1899E70D50605FC108F07E0D /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4197B09138D07D5F11F44C88 /* AcknowledgementsView.swift */; };
+		2B02C7D82BFED0FCE7EE6D49 /* ChangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C765BE8AEC4B2A370EAE021C /* ChangesView.swift */; };
+		421791BF1680DA2F0FFF67D6 /* AccountsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072272BB241D5E9D42B1FABF /* AccountsViews.swift */; };
+		43B4603FA4CF7573E622FE68 /* PushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A283E76E87FA40344B03273 /* PushView.swift */; };
+		4BFC30E23FE4FFC6CBD17FA2 /* AccountFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C90DC2785112C012B442F /* AccountFlowUITests.swift */; };
+		5069D5048ADE1256D5481D3F /* ScreenshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A792FA0A21241E43E19396 /* ScreenshotUITests.swift */; };
+		514F4CDD86B3774DF051D987 /* MedcezirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320BF2ACCB26D1E27BDABD11 /* MedcezirApp.swift */; };
+		51C7BC0384E494B710391D02 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5013CC27615DA88424216F4F /* PrivacyInfo.xcprivacy */; };
+		75D55AD7853B6C81218E2925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA158FEF83CE5453470D5DBF /* Assets.xcassets */; };
+		79276A4436D88D5A97457ABA /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */; };
+		9E34F05593BE6BD7A5A712E2 /* FileBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B94365CFA9B79251BA145 /* FileBrowserView.swift */; };
+		B5A9584F6088F1EA49EA400C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674394A6F7EC67A29E6A8DE9 /* ContentView.swift */; };
+		B6EDE47C92017C68365132A0 /* CloneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6632C29B062D998407144 /* CloneView.swift */; };
+		D5F5B6EAA3DB05CD173953C6 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F186F431E3A23D6572195 /* AppModel.swift */; };
+		EACB68029F6D94FB54E0B3A4 /* HistoryBranchesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B047FAC6DA084860B4281C7 /* HistoryBranchesViews.swift */; };
+		F0FB7AF16797BB2E8F0C7EC8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7535B0948321FAD6A2464 /* SettingsView.swift */; };
+		F5668856A586474F4C64E30A /* MedcezirCore in Frameworks */ = {isa = PBXBuildFile; productRef = B68DF271B22716A1CA1C7E5A /* MedcezirCore */; };
+		F56FAE6E6EE4F7D2814CA1C9 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4714D043739F56FAAC8A4B /* RepositoryModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EBC7376B1816A41B9721A3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09906576FEEE64F9A432C8D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2E35CACD6455ACAFED82AAD;
+			remoteInfo = Medcezir;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		072272BB241D5E9D42B1FABF /* AccountsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViews.swift; sourceTree = "<group>"; };
+		0A6C90DC2785112C012B442F /* AccountFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFlowUITests.swift; sourceTree = "<group>"; };
+		20A792FA0A21241E43E19396 /* ScreenshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotUITests.swift; sourceTree = "<group>"; };
+		2C4714D043739F56FAAC8A4B /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		320BF2ACCB26D1E27BDABD11 /* MedcezirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedcezirApp.swift; sourceTree = "<group>"; };
+		4197B09138D07D5F11F44C88 /* AcknowledgementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
+		5013CC27615DA88424216F4F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		5AA6632C29B062D998407144 /* CloneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloneView.swift; sourceTree = "<group>"; };
+		674394A6F7EC67A29E6A8DE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B047FAC6DA084860B4281C7 /* HistoryBranchesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBranchesViews.swift; sourceTree = "<group>"; };
+		744B8450B9777F1EE6909B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		77C0D24E7B72146912FAF08F /* MedcezirUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MedcezirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A283E76E87FA40344B03273 /* PushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
+		9DA7535B0948321FAD6A2464 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A5771C418AC029B2BEF0E960 /* Medcezir.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Medcezir.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C765BE8AEC4B2A370EAE021C /* ChangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesView.swift; sourceTree = "<group>"; };
+		CA158FEF83CE5453470D5DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF8B94365CFA9B79251BA145 /* FileBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBrowserView.swift; sourceTree = "<group>"; };
+		F21F186F431E3A23D6572195 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		FBA946ED84BC969A6FCEFAC5 /* MedcezirKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MedcezirKit; path = Packages/MedcezirKit; sourceTree = SOURCE_ROOT; };
+		FD29DF596D7DCF61B6067085 /* libgit2-COPYING.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libgit2-COPYING.txt"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E56141A5B8E9FD86F638AB6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5668856A586474F4C64E30A /* MedcezirCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E7BB3B893C7591203392222 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5771C418AC029B2BEF0E960 /* Medcezir.app */,
+				77C0D24E7B72146912FAF08F /* MedcezirUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		503CA74F41E2CAF1C49AF041 /* Medcezir */ = {
+			isa = PBXGroup;
+			children = (
+				CA158FEF83CE5453470D5DBF /* Assets.xcassets */,
+				744B8450B9777F1EE6909B9C /* Info.plist */,
+				320BF2ACCB26D1E27BDABD11 /* MedcezirApp.swift */,
+				5013CC27615DA88424216F4F /* PrivacyInfo.xcprivacy */,
+				720E5F9C7591A275B91B1C36 /* Models */,
+				9F0A9872CF03609620FEE564 /* Resources */,
+				DFFBD9003EE9DB60E7E30134 /* Views */,
+			);
+			path = Medcezir;
+			sourceTree = "<group>";
+		};
+		64D76DFA991CE869087B3CB3 /* MedcezirUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0A6C90DC2785112C012B442F /* AccountFlowUITests.swift */,
+				20A792FA0A21241E43E19396 /* ScreenshotUITests.swift */,
+			);
+			path = MedcezirUITests;
+			sourceTree = "<group>";
+		};
+		720E5F9C7591A275B91B1C36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F21F186F431E3A23D6572195 /* AppModel.swift */,
+				2C4714D043739F56FAAC8A4B /* RepositoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7DBD16B8AEED150029DBF79B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FBA946ED84BC969A6FCEFAC5 /* MedcezirKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		9F0A9872CF03609620FEE564 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD29DF596D7DCF61B6067085 /* libgit2-COPYING.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D8EF85F4CC8539B9FE010E28 = {
+			isa = PBXGroup;
+			children = (
+				503CA74F41E2CAF1C49AF041 /* Medcezir */,
+				64D76DFA991CE869087B3CB3 /* MedcezirUITests */,
+				7DBD16B8AEED150029DBF79B /* Packages */,
+				3E7BB3B893C7591203392222 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFFBD9003EE9DB60E7E30134 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				072272BB241D5E9D42B1FABF /* AccountsViews.swift */,
+				4197B09138D07D5F11F44C88 /* AcknowledgementsView.swift */,
+				C765BE8AEC4B2A370EAE021C /* ChangesView.swift */,
+				5AA6632C29B062D998407144 /* CloneView.swift */,
+				674394A6F7EC67A29E6A8DE9 /* ContentView.swift */,
+				EF8B94365CFA9B79251BA145 /* FileBrowserView.swift */,
+				6B047FAC6DA084860B4281C7 /* HistoryBranchesViews.swift */,
+				7A283E76E87FA40344B03273 /* PushView.swift */,
+				2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */,
+				9DA7535B0948321FAD6A2464 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E1E53B4C6BFA4C538779268 /* MedcezirUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5EA191FB9E828406D99A9DF /* Build configuration list for PBXNativeTarget "MedcezirUITests" */;
+			buildPhases = (
+				4EABB1D6BE6CA31F14FD1EA9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1182C53AD13A8CD1F88DCD91 /* PBXTargetDependency */,
+			);
+			name = MedcezirUITests;
+			packageProductDependencies = (
+			);
+			productName = MedcezirUITests;
+			productReference = 77C0D24E7B72146912FAF08F /* MedcezirUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E2E35CACD6455ACAFED82AAD /* Medcezir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83981488941B067FB26037F7 /* Build configuration list for PBXNativeTarget "Medcezir" */;
+			buildPhases = (
+				4040141DBF8BB52157E46EA4 /* Sources */,
+				E74E9171496748477F5F5DD9 /* Resources */,
+				E56141A5B8E9FD86F638AB6E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Medcezir;
+			packageProductDependencies = (
+				B68DF271B22716A1CA1C7E5A /* MedcezirCore */,
+			);
+			productName = Medcezir;
+			productReference = A5771C418AC029B2BEF0E960 /* Medcezir.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09906576FEEE64F9A432C8D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3E1E53B4C6BFA4C538779268 = {
+						DevelopmentTeam = 7WRYR7WZJR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2E35CACD6455ACAFED82AAD;
+					};
+					E2E35CACD6455ACAFED82AAD = {
+						DevelopmentTeam = 7WRYR7WZJR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EA575D84A1E58185E3467033 /* Build configuration list for PBXProject "Medcezir" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D8EF85F4CC8539B9FE010E28;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				98B937AD6DB1BAF8F4260D18 /* XCLocalSwiftPackageReference "Packages/MedcezirKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3E7BB3B893C7591203392222 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2E35CACD6455ACAFED82AAD /* Medcezir */,
+				3E1E53B4C6BFA4C538779268 /* MedcezirUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E74E9171496748477F5F5DD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75D55AD7853B6C81218E2925 /* Assets.xcassets in Resources */,
+				51C7BC0384E494B710391D02 /* PrivacyInfo.xcprivacy in Resources */,
+				004DEDD253276C63EACCA693 /* libgit2-COPYING.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4040141DBF8BB52157E46EA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				421791BF1680DA2F0FFF67D6 /* AccountsViews.swift in Sources */,
+				1899E70D50605FC108F07E0D /* AcknowledgementsView.swift in Sources */,
+				D5F5B6EAA3DB05CD173953C6 /* AppModel.swift in Sources */,
+				2B02C7D82BFED0FCE7EE6D49 /* ChangesView.swift in Sources */,
+				B6EDE47C92017C68365132A0 /* CloneView.swift in Sources */,
+				B5A9584F6088F1EA49EA400C /* ContentView.swift in Sources */,
+				9E34F05593BE6BD7A5A712E2 /* FileBrowserView.swift in Sources */,
+				EACB68029F6D94FB54E0B3A4 /* HistoryBranchesViews.swift in Sources */,
+				514F4CDD86B3774DF051D987 /* MedcezirApp.swift in Sources */,
+				43B4603FA4CF7573E622FE68 /* PushView.swift in Sources */,
+				F56FAE6E6EE4F7D2814CA1C9 /* RepositoryModel.swift in Sources */,
+				79276A4436D88D5A97457ABA /* RepositoryView.swift in Sources */,
+				F0FB7AF16797BB2E8F0C7EC8 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EABB1D6BE6CA31F14FD1EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFC30E23FE4FFC6CBD17FA2 /* AccountFlowUITests.swift in Sources */,
+				5069D5048ADE1256D5481D3F /* ScreenshotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1182C53AD13A8CD1F88DCD91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2E35CACD6455ACAFED82AAD /* Medcezir */;
+			targetProxy = 6EBC7376B1816A41B9721A3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1FB6952F3C891DCE9375D799 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WRYR7WZJR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Medcezir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Medcezir;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.GitPad;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CD6BF3F17625C61E64D00B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		77884107E96E581E5D654364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WRYR7WZJR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.MedcezirUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Medcezir;
+			};
+			name = Release;
+		};
+		85A5B1F816BE8872FE17A0EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WRYR7WZJR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Medcezir/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Medcezir;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsMultipleScenes = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.GitPad;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE96FFC9E13433B35D172EA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 0.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		CEDFF88AAAF8C15811397540 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WRYR7WZJR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.berkgozek.MedcezirUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Medcezir;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83981488941B067FB26037F7 /* Build configuration list for PBXNativeTarget "Medcezir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB6952F3C891DCE9375D799 /* Debug */,
+				85A5B1F816BE8872FE17A0EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EA575D84A1E58185E3467033 /* Build configuration list for PBXProject "Medcezir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE96FFC9E13433B35D172EA8 /* Debug */,
+				4CD6BF3F17625C61E64D00B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F5EA191FB9E828406D99A9DF /* Build configuration list for PBXNativeTarget "MedcezirUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDFF88AAAF8C15811397540 /* Debug */,
+				77884107E96E581E5D654364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		98B937AD6DB1BAF8F4260D18 /* XCLocalSwiftPackageReference "Packages/MedcezirKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/MedcezirKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B68DF271B22716A1CA1C7E5A /* MedcezirCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MedcezirCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 09906576FEEE64F9A432C8D4 /* Project object */;
+}

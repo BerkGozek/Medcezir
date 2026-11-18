@@ -1,0 +1,59 @@
+import MedcezirCore
+import SwiftUI
+
+struct SettingsView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
+    @Environment(AppModel.self) private var app
+    @AppStorage(CommitIdentity.nameKey) private var name = ""
+    @AppStorage(CommitIdentity.emailKey) private var email = ""
+    @State private var showingAddAccount = false
+    @State private var pendingAccountRemoval: Account?
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("Name", text: $name)
+                        .textContentType(.name)
+                    TextField("Email", text: $email)
+                        .textContentType(.emailAddress)
+                        .keyboardType(.emailAddress)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Commit Author")
+                } footer: {
+                    Text("Used as the author of commits you make on this \(deviceModel). Use the email your Git host knows, so commits link to your account.")
+                }
+
+                AccountsSection(showingAdd: $showingAddAccount, pendingRemoval: $pendingAccountRemoval)
+
+                Section {
+                    LabeledContent("Location", value: "On My \(deviceModel) › Medcezir › Repositories")
+                    if let url = app.store.repositoriesURL.filesAppURL {
+                        Button("Open in Files", systemImage: "folder") { openURL(url) }
+                    }
+                } header: {
+                    Text("Storage")
+                } footer: {
+                    Text("Repositories are stored in the app's folder. Deleting Medcezir from this \(deviceModel) deletes them too, including anything not pushed.")
+                }
+
+                Section("About") {
+                    LabeledContent("Version", value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "?")
+                    LabeledContent("libgit2", value: libgit2Version())
+                    NavigationLink("Acknowledgements") { AcknowledgementsView() }
+                }
+            }
+            .accountsPresentation(showingAdd: $showingAddAccount, pendingRemoval: $pendingAccountRemoval, app: app)
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
+        }
+    }
+}
