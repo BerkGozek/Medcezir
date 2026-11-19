@@ -20,6 +20,9 @@ Next: Phase 4. GitHub sign-in via device flow (needs a Client ID from Berk), mor
 | UI tests on iPhone (2026-11-18, iPhone 17 Pro sim) | `xcodebuild -scheme Medcezir -destination 'platform=iOS Simulator,name=iPhone 17 Pro' test` (+ `TEST_RUNNER_SCREENSHOT_DIR`) | ✅ 2/2: add-account flow; clone → files → open subfolder → back → history → branches |
 | UI tests on iPad (2026-11-18, iPad Pro 11" M5 sim) | same, iPad destination | ✅ 2/2 |
 | Device build (2026-11-18) | `xcodebuild -destination generic/platform=iOS -allowProvisioningUpdates build` | ✅ signed; `UIDeviceFamily` [1,2], display name Medcezir, bundle ID com.berkgozek.GitPad |
+| GitHub repository list (2026-11-18) | `swift test` (`RemoteRepositoryListerTests`, stubbed network) | ✅ 7/7: parsing, `Link` pagination, token sent as Bearer, never follows pagination to another host, 401 → clear error without the token, GitHub Enterprise API host, other providers unsupported |
+| GitHub repository list, live | `MEDCEZIR_LIVE_TESTS=1 MEDCEZIR_TEST_TOKEN=$(gh auth token) swift test --filter LiveRepositoryListTests` | ✅ 52 repositories (26 private), newest first, no duplicates across pages |
+| Clone sheet → Choose from GitHub, live (iPhone sim) | `TEST_RUNNER_MEDCEZIR_TEST_TOKEN=$(gh auth token) xcodebuild … test -only-testing:MedcezirUITests/RepositoryPickerUITests` | ✅ add account → list loads → search → pick `gitpad-test-sandbox` → URL, account and folder name filled → account removed in teardown |
 
 ## Verified on Berk's iPad Air (5th gen, iPadOS 26)
 - Phase 1 build installed from Xcode; cloned `BerkGozek/Testing-Repository` over HTTPS ✅

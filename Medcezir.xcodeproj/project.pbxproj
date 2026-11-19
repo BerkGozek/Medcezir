@@ -18,11 +18,13 @@
 		51C7BC0384E494B710391D02 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5013CC27615DA88424216F4F /* PrivacyInfo.xcprivacy */; };
 		75D55AD7853B6C81218E2925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA158FEF83CE5453470D5DBF /* Assets.xcassets */; };
 		79276A4436D88D5A97457ABA /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */; };
+		92B28BF71F4B9D51BA69607F /* RepositoryPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240C6137B850AEFF324E85E /* RepositoryPickerUITests.swift */; };
 		9E34F05593BE6BD7A5A712E2 /* FileBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B94365CFA9B79251BA145 /* FileBrowserView.swift */; };
 		B5A9584F6088F1EA49EA400C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674394A6F7EC67A29E6A8DE9 /* ContentView.swift */; };
 		B6EDE47C92017C68365132A0 /* CloneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6632C29B062D998407144 /* CloneView.swift */; };
 		D5F5B6EAA3DB05CD173953C6 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F186F431E3A23D6572195 /* AppModel.swift */; };
 		EACB68029F6D94FB54E0B3A4 /* HistoryBranchesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B047FAC6DA084860B4281C7 /* HistoryBranchesViews.swift */; };
+		EEE038D4EEC225657BE5D8B0 /* RemoteRepositoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BDC3EF5A95A84D6326D72 /* RemoteRepositoryPicker.swift */; };
 		F0FB7AF16797BB2E8F0C7EC8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA7535B0948321FAD6A2464 /* SettingsView.swift */; };
 		F5668856A586474F4C64E30A /* MedcezirCore in Frameworks */ = {isa = PBXBuildFile; productRef = B68DF271B22716A1CA1C7E5A /* MedcezirCore */; };
 		F56FAE6E6EE4F7D2814CA1C9 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4714D043739F56FAAC8A4B /* RepositoryModel.swift */; };
@@ -42,6 +44,7 @@
 		072272BB241D5E9D42B1FABF /* AccountsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViews.swift; sourceTree = "<group>"; };
 		0A6C90DC2785112C012B442F /* AccountFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFlowUITests.swift; sourceTree = "<group>"; };
 		20A792FA0A21241E43E19396 /* ScreenshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotUITests.swift; sourceTree = "<group>"; };
+		2240C6137B850AEFF324E85E /* RepositoryPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPickerUITests.swift; sourceTree = "<group>"; };
 		2C4714D043739F56FAAC8A4B /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		320BF2ACCB26D1E27BDABD11 /* MedcezirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedcezirApp.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		744B8450B9777F1EE6909B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		77C0D24E7B72146912FAF08F /* MedcezirUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MedcezirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A283E76E87FA40344B03273 /* PushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
+		977BDC3EF5A95A84D6326D72 /* RemoteRepositoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepositoryPicker.swift; sourceTree = "<group>"; };
 		9DA7535B0948321FAD6A2464 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A5771C418AC029B2BEF0E960 /* Medcezir.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Medcezir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C765BE8AEC4B2A370EAE021C /* ChangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangesView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0A6C90DC2785112C012B442F /* AccountFlowUITests.swift */,
+				2240C6137B850AEFF324E85E /* RepositoryPickerUITests.swift */,
 				20A792FA0A21241E43E19396 /* ScreenshotUITests.swift */,
 			);
 			path = MedcezirUITests;
@@ -153,6 +158,7 @@
 				EF8B94365CFA9B79251BA145 /* FileBrowserView.swift */,
 				6B047FAC6DA084860B4281C7 /* HistoryBranchesViews.swift */,
 				7A283E76E87FA40344B03273 /* PushView.swift */,
+				977BDC3EF5A95A84D6326D72 /* RemoteRepositoryPicker.swift */,
 				2F1E37AECE0E4BB421C9385C /* RepositoryView.swift */,
 				9DA7535B0948321FAD6A2464 /* SettingsView.swift */,
 			);
@@ -271,6 +277,7 @@
 				EACB68029F6D94FB54E0B3A4 /* HistoryBranchesViews.swift in Sources */,
 				514F4CDD86B3774DF051D987 /* MedcezirApp.swift in Sources */,
 				43B4603FA4CF7573E622FE68 /* PushView.swift in Sources */,
+				EEE038D4EEC225657BE5D8B0 /* RemoteRepositoryPicker.swift in Sources */,
 				F56FAE6E6EE4F7D2814CA1C9 /* RepositoryModel.swift in Sources */,
 				79276A4436D88D5A97457ABA /* RepositoryView.swift in Sources */,
 				F0FB7AF16797BB2E8F0C7EC8 /* SettingsView.swift in Sources */,
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BFC30E23FE4FFC6CBD17FA2 /* AccountFlowUITests.swift in Sources */,
+				92B28BF71F4B9D51BA69607F /* RepositoryPickerUITests.swift in Sources */,
 				5069D5048ADE1256D5481D3F /* ScreenshotUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

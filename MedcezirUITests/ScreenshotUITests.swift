@@ -40,7 +40,9 @@ final class ScreenshotUITests: XCTestCase {
                 return
             }
         }
-        if repoRow.exists && repoRow.isHittable { repoRow.tap() }
+        // Only open it from the list if it isn't open already: once it is, "Medcezir" also
+        // matches the app's source folder inside the file list.
+        if !app.buttons["Branches"].firstMatch.exists && repoRow.exists && repoRow.isHittable { repoRow.tap() }
         sleep(2)
         save(app, "files", to: directory)
 

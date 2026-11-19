@@ -60,3 +60,19 @@ struct LiveGitHubTests {
         #expect(try await b.log(limit: 1).first?.summary == "Live test \(stamp)")
     }
 }
+
+/// Read-only: lists the token owner's repositories through the real GitHub API.
+/// Skipped unless `MEDCEZIR_LIVE_TESTS=1` and `MEDCEZIR_TEST_TOKEN` are set.
+@Suite(.enabled(if: ProcessInfo.processInfo.environment["MEDCEZIR_LIVE_TESTS"] == "1"))
+struct LiveRepositoryListTests {
+    @Test func listsRepositoriesIncludingPrivateOnes() async throws {
+        let token = ProcessInfo.processInfo.environment["MEDCEZIR_TEST_TOKEN"] ?? ""
+        try #require(!token.isEmpty, "Set MEDCEZIR_TEST_TOKEN")
+        let account = Account(provider: .github, host: "github.com", username: "x-access-token", displayName: "live")
+        let repos = try await RemoteRepositoryLister.repositories(for: account, token: token)
+        #expect(!repos.isEmpty)
+        #expect(repos.allSatisfy { $0.cloneURL.hasPrefix("https://github.com/") && $0.cloneURL.hasSuffix(".git") })
+        #expect(Set(repos.map(\.fullName)).count == repos.count, "pagination must not repeat repositories")
+        print("LIVE: \(repos.count) repositories, \(repos.filter(\.isPrivate).count) private; newest: \(repos.prefix(3).map(\.fullName))")
+    }
+}

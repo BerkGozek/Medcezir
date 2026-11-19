@@ -23,6 +23,11 @@ struct CloneView: View {
         return app.accounts.filter { $0.host == host }
     }
 
+    /// Accounts whose host can list their repositories (GitHub for now).
+    private var browsableAccounts: [Account] {
+        app.accounts.filter { RemoteRepositoryLister.supports($0.provider) }
+    }
+
     private var canClone: Bool {
         !isCloning && URL(string: urlText.trimmingCharacters(in: .whitespaces))?.scheme?.hasPrefix("http") == true
             && !name.trimmingCharacters(in: .whitespaces).isEmpty
@@ -31,6 +36,28 @@ struct CloneView: View {
     var body: some View {
         NavigationStack {
             Form {
+                if !browsableAccounts.isEmpty {
+                    Section {
+                        ForEach(browsableAccounts) { account in
+                            NavigationLink {
+                                RemoteRepositoryPicker(account: account) { picked in
+                                    // Account first: the URL's onChange keeps it because it matches the host.
+                                    accountID = account.id
+                                    urlText = picked.cloneURL
+                                    nameEdited = false
+                                    name = app.store.suggestedName(for: picked.cloneURL)
+                                }
+                            } label: {
+                                Label(browsableAccounts.count == 1 ? "Choose from \(account.provider.displayName)" : "Choose from \(account.displayName) · \(account.host)",
+                                      systemImage: "list.bullet.rectangle")
+                            }
+                            .disabled(isCloning)
+                        }
+                    } header: {
+                        Text("Your Repositories")
+                    }
+                }
+
                 Section {
                     TextField("https://github.com/owner/repository.git", text: $urlText)
                         .textContentType(.URL)
