@@ -1,8 +1,10 @@
-// Renders Medcezir's app icon: SF Symbol "arrow.triangle.branch" on an orange gradient.
+// Renders Medcezir's app icon from the editable SVG in design/ (top-down beach, tide, starfish).
+// Edit design/app-icon-beach.svg in Illustrator, then rerun this to refresh the app icon.
 // Output is exactly 1024×1024 with no alpha channel (App Store Connect rejects transparency).
 // Drawing uses a 32-bit context whose 4th byte is ignored (`noneSkipLast`): CoreGraphics can't
 // draw into 24-bit RGB, and drawing into an RGBA bitmap would keep an alpha channel.
-// Usage: swift scripts/make-icon.swift <output.png>
+// Usage: swift scripts/make-icon.swift design/app-icon-beach.svg \
+//          Medcezir/Assets.xcassets/AppIcon.appiconset/icon-1024.png
 import AppKit
 import UniformTypeIdentifiers
 
@@ -16,18 +18,15 @@ let context = CGContext(
 NSGraphicsContext.saveGraphicsState()
 NSGraphicsContext.current = NSGraphicsContext(cgContext: context, flipped: false)
 let bounds = NSRect(x: 0, y: 0, width: size, height: size)
-NSGradient(starting: NSColor(srgbRed: 0.98, green: 0.45, blue: 0.22, alpha: 1),
-           ending: NSColor(srgbRed: 0.85, green: 0.20, blue: 0.20, alpha: 1))!
-    .draw(in: bounds, angle: -90)
-let config = NSImage.SymbolConfiguration(pointSize: 560, weight: .semibold)
-    .applying(.init(paletteColors: [.white]))
-if let symbol = NSImage(systemSymbolName: "arrow.triangle.branch", accessibilityDescription: nil)?.withSymbolConfiguration(config) {
-    let s = symbol.size
-    symbol.draw(in: NSRect(x: (Double(size) - s.width) / 2, y: (Double(size) - s.height) / 2, width: s.width, height: s.height))
+guard let artwork = NSImage(contentsOf: URL(fileURLWithPath: CommandLine.arguments[1])) else {
+    fatalError("Couldn't read \(CommandLine.arguments[1])")
 }
+NSColor.white.setFill()
+bounds.fill()
+artwork.draw(in: bounds, from: .zero, operation: .sourceOver, fraction: 1)
 NSGraphicsContext.restoreGraphicsState()
 
-let url = URL(fileURLWithPath: CommandLine.arguments[1]) as CFURL
+let url = URL(fileURLWithPath: CommandLine.arguments[2]) as CFURL
 let destination = CGImageDestinationCreateWithURL(url, UTType.png.identifier as CFString, 1, nil)!
 CGImageDestinationAddImage(destination, context.makeImage()!, nil)
 precondition(CGImageDestinationFinalize(destination), "Couldn't write PNG")
