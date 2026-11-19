@@ -37,7 +37,7 @@ Next: Phase 4. GitHub sign-in via device flow (needs a Client ID from Berk), mor
 - Install and a full clone/commit/push on a physical iPhone. Files → On My iPhone → Medcezir exposure.
 
 ## App Store / TestFlight readiness
-- App icon: 1024×1024, no alpha ✅. 2026-11-18: new beach/starfish design, rendered from `design/app-icon-beach.svg` by `scripts/make-icon.swift`
+- App icon: 1024×1024, no alpha ✅. 2026-11-18: new beach/starfish design, rendered from `design/app-icon-beach.svg` by `scripts/make-icon.swift`; dark-mode variant (moonlit) from `design/app-icon-beach-night.svg` → `icon-1024-dark.png`, verified on the iPhone simulator home screen
 - `PrivacyInfo.xcprivacy`: no tracking/collection; UserDefaults CA92.1, FileTimestamp C617.1, SystemBootTime 35F9.1 ✅ (in the built app)
 - `ITSAppUsesNonExemptEncryption = NO` (standard HTTPS only) ✅
 - Archive + upload: ⏸ not possible yet. The project's team is `7WRYR7WZJR` "Berk Gozek (Personal Team)", a **free** team, which can't use TestFlight. Needs a paid Apple Developer Program membership.

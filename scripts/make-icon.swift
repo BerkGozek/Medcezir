@@ -3,6 +3,7 @@
 // Output is exactly 1024×1024 with no alpha channel (App Store Connect rejects transparency).
 // Drawing uses a 32-bit context whose 4th byte is ignored (`noneSkipLast`): CoreGraphics can't
 // draw into 24-bit RGB, and drawing into an RGBA bitmap would keep an alpha channel.
+// Dark-mode icon: same command with design/app-icon-beach-night.svg → icon-1024-dark.png.
 // Usage: swift scripts/make-icon.swift design/app-icon-beach.svg \
 //          Medcezir/Assets.xcassets/AppIcon.appiconset/icon-1024.png
 import AppKit
